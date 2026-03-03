@@ -1,0 +1,46 @@
+name: Build and Deploy Registry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'workspaces/**'
+      - 'site/**'
+      - 'processing/**'
+      - 'build_all_branches.sh'
+  repository_dispatch:
+    types: [registry-rebuild]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm ci --prefix processing
+          npm ci --prefix site
+
+      - name: Build registry
+        run: |
+          chmod +x build_all_branches.sh
+          ./build_all_branches.sh
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: public

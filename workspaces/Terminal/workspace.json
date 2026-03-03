@@ -1,0 +1,19 @@
+{
+  "friendly_name": "Terminal",
+  "description": "Lightweight CLI workspace with tmux, screen, nano, and dnsutils.",
+  "docker_registry": "https://ghcr.io/",
+  "image_src": "terminal.svg",
+  "categories": [
+    "Development"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "ghcr.io/sharrison-sans/kasm-terminal:latest",
+      "uncompressed_size_mb": 2200
+    }
+  ]
+}

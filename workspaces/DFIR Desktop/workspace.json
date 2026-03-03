@@ -1,0 +1,23 @@
+{
+  "friendly_name": "DFIR Desktop",
+  "description": "Digital forensics workstation with Autopsy, Ghidra, Volatility3, Wireshark, CyberChef, and more.",
+  "docker_registry": "https://ghcr.io/",
+  "image_src": "dfir-desktop.svg",
+  "categories": [
+    "Security",
+    "Development"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "ghcr.io/sharrison-sans/kasm-dfir-desktop:latest",
+      "uncompressed_size_mb": 5200
+    }
+  ]
+}

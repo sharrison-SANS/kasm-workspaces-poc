@@ -1,0 +1,22 @@
+{
+  "friendly_name": "Kali Desktop",
+  "description": "Penetration testing lab with kali-tools-top10, Metasploit, Nmap, and Burp Suite.",
+  "docker_registry": "https://ghcr.io/",
+  "image_src": "kali-desktop.svg",
+  "categories": [
+    "Security"
+  ],
+  "architecture": [
+    "amd64"
+  ],
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "compatibility": [
+    {
+      "version": "1.16.x",
+      "image": "ghcr.io/sharrison-sans/kasm-kali-desktop:latest",
+      "uncompressed_size_mb": 9800
+    }
+  ]
+}
