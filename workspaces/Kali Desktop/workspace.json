@@ -12,11 +12,18 @@
   "run_config": {
     "hostname": "kasm"
   },
+  "exec_config": {
+    "cap_add": ["NET_RAW", "NET_ADMIN", "SYS_PTRACE"]
+  },
   "compatibility": [
     {
-      "version": "1.16.x",
-      "image": "ghcr.io/sharrison-sans/kasm-kali-desktop:latest",
-      "uncompressed_size_mb": 9800
+      "version": "1.19.x",
+      "image": "ghcr.io/sharrison-sans/kasm-kali-desktop:stable",
+      "uncompressed_size_mb": 9800,
+      "available_tags": [
+        "stable",
+        "develop"
+      ]
     }
   ]
 }

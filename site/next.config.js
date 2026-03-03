@@ -4,11 +4,12 @@ const nextConfig = {
   output: 'export',
   distDir: '../public',
   env: {
-    name: 'Lab Images POC',
+    name: 'Kasm Workspaces POC',
     description: 'Custom lab workspace images.',
     icon: '/img/logo.svg',
     listUrl: 'https://sharrison-sans.github.io/kasm-workspaces-poc/',
     contactUrl: 'https://github.com/sharrison-SANS/kasm-workspaces-poc/issues',
+    schema: '1.1',
   },
   reactStrictMode: true,
   basePath: '/kasm-workspaces-poc/1.0',

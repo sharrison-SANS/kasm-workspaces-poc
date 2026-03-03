@@ -66,6 +66,7 @@ glob("**/workspace.json", async function (err, files) {
 
 	let json = {
 		name: nextConfig.env.name || 'Unknown store',
+		schema_version: nextConfig.env.schema || '1.0',
 		workspacecount: workspacetotal,
 		icon: nextConfig.env.icon || null,
 		description: nextConfig.env.description || null,
